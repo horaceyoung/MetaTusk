@@ -285,7 +285,7 @@ extension AccountHeaderView: UITextViewDelegate {
         in characterRange: NSRange,
         interaction: UITextItemInteraction
     ) -> Bool {
-        guard textView == noteTextView else {
+        guard textView is TouchFallthroughTextView else {
             return false
         }
         switch interaction {
